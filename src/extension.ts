@@ -30,7 +30,7 @@ async function batchopen() {
 		if (line[0] === '/') {
 			line = line.slice(1);
 		}
-		const u = await vscode.workspace.findFiles(line, null, 1);
+		const u = await vscode.workspace.findFiles(path.join(workdir, line), null, 1);
 		if (u.length === 0) {
 			console.log(`not found: ${line}`);
 			notfound.push(line);
