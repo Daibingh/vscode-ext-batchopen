@@ -11,7 +11,7 @@ async function batchopen() {
 	const workdir: string = vscode.workspace.workspaceFolders[0].uri.fsPath;
 	console.log(`workdir: ${workdir}`);
 	const file : string = path.join(workdir, '.vscode', 'batchopen.py');
-	console.log(`workdir: ${file}`);
+	console.log(`listfile: ${file}`);
 	let data: string;
 	let notfound : string[] = [];
 	let cnt: number = 0;
