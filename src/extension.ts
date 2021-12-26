@@ -19,6 +19,7 @@ async function batchopen() {
 		data = fs.readFileSync(file, "utf-8");
 	} catch (err) {
 		console.log(err);
+		vscode.window.showInformationMessage(`can not find .vscode/batchopen.py!`);
 		return;
 	}
 
